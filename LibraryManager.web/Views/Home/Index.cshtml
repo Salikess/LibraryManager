@@ -1,0 +1,49 @@
+﻿<h2 class="mt-4">📚 Boeken</h2>
+<hr />
+
+<p class="mb-3">
+    <a asp-controller="Boeks" asp-action="Index" class="btn btn-outline-primary me-2">Alle boeken</a>
+    <a asp-controller="Boeks" asp-action="Create" class="btn btn-success">+ Nieuw boek</a>
+
+<table class="table">
+    <tr>
+        <th>Titel</th>
+        <th>Auteur</th>
+        <th>Categorie</th>
+    </tr>
+
+    @foreach (var boek in ViewBag.Boeken)
+    {
+        <tr>
+            <td>@boek.Titel</td>
+            <td>@boek.Auteur.Voornaam</td>
+            <td>@boek.Categorie.Naam</td>
+        </tr>
+    }
+</table>
+    <h2 class="mt-4">👨‍💼 Auteurs</h2>
+<p>
+    <a asp-controller="Auteurs" asp-action="Index" class="btn btn-outline-primary me-2">Alle auteurs</a>
+    <a asp-controller="Auteurs" asp-action="Create" class="btn btn-success">+ Nieuwe auteur</a>
+</p>
+
+<ul>
+    @foreach (var auteur in ViewBag.Auteurs)
+    {
+        <li>@auteur.Voornaam @auteur.Achternaam</li>
+    }
+</ul>
+
+<h2 class="mt-4">🏷️ Categories</h2>
+
+<p>
+    <a asp-controller="Categories" asp-action="Index" class="btn btn-outline-primary me-2">Alle categorieën</a>
+    <a asp-controller="Categories" asp-action="Create" class="btn btn-success">+ Nieuwe categorie</a>
+</p>
+
+<ul>
+    @foreach (var cat in ViewBag.Categories)
+    {
+        <li>@cat.Naam</li>
+    }
+</ul>

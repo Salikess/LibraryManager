@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-LibraryManager.web-b4799a88-a951-4e49-a44a-5236e752eb6f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryManager.Data\LibraryManager.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Data\" />
+  </ItemGroup>
+
+</Project>
